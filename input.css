@@ -1,0 +1,52 @@
+.input-container {
+  position: relative;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.input-container input {
+  /*width: 100%;*/
+  padding: 33px 20px 10px;
+  font-weight: 600;
+  color: #003B67;
+  border: 1px solid rgba(0, 59, 103, 0.1);
+  border-radius: 5px;
+}
+
+.input-container input:focus .input-container input:hover {
+  border-color: #4ABAF1;
+}
+
+.input-container input::placeholder {
+  color: transparent;
+}
+
+.input-container .placeholder {
+  pointer-events: none;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #728594;
+  transition: .3s;
+}
+
+.input-container input:focus {
+  box-shadow: 0 0 15px rgba(74, 186, 241, 0.3);
+}
+
+.input-container input:focus + .placeholder, .input-container :not(input:placeholder-shown) + .placeholder {
+  top: 8px;
+  transform: none;
+}
+
+.input-container input.disabled, .input-container input:disabled {
+  background-color: #F4F9FC;
+  pointer-events: none;
+  color: rgba(114, 133, 148, 0.7);
+}
+
+.input-container input.disabled + .placeholder, .input-container input:disabled + .placeholder {
+  color: rgba(114, 133, 148, 0.5);
+  pointer-events: none;
+}

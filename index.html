@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="custom-select">
+    <select name="" id="" disabled>
+      <option value="1">One</option>
+      <option value="two">Two</option>
+      <option value="3three">Three</option>
+      <option value="four4" disabled="disabled">Four</option>
+      <option value="5" selected="selected">Five</option>
+    </select>
+  </div>
+  <div class="custom-select2">
+    <select name="" id="">
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="4">Four</option>
+      <option value="5">Five</option>
+    </select>
+  </div>
+  <label class="checkbox-radio">
+    <input type="checkbox" checked>
+    <div class="checkbox"></div>
+    some text
+  </label>
+  <label class="checkbox-radio">
+    <input type="checkbox">
+    <div class="checkbox"></div>
+    some text
+  </label>
+  <label class="checkbox-radio">
+    <input type="checkbox" disabled checked>
+    <div class="checkbox"></div>
+    some text
+  </label>
+  <label class="checkbox-radio">
+    <input type="checkbox" disabled>
+    <div class="checkbox"></div>
+    some text
+  </label>
+  <div class="input-container">
+    <input type="text" placeholder="1">
+    <div class="placeholder">placeholder</div>
+  </div>
+  <div class="input-container">
+    <input type="text" placeholder="1" disabled>
+    <div class="placeholder">placeholder</div>
+  </div>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      display: grid;
+      grid-gap: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="custom_select.css">
+  <script src="custom_select.js"></script>
+  <script>
+    let mySel = new CustomSelect('.custom-select', {
+      hideSelect: false,
+      someRandomKey: false,
+      hideOnOutsideClick: false,
+      afterInit: function() {}
+    });
+    let mySel2 = new CustomSelect('.custom-select2');
+  </script>
+  <link rel="stylesheet" href="custom_checkbox_radio.css">
+  <link rel="stylesheet" href="input.css">
+</body>
+</html>

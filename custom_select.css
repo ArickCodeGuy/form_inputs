@@ -1,0 +1,42 @@
+.custom-select,
+.custom-select2 {
+  max-width: 260px;
+  cursor: pointer;
+  background-color: lightgreen;
+  position: relative;
+}
+.custom-select-placeholder,
+.custom-select-option {
+  padding: 10px 20px;
+  width: 100%;
+}
+.custom-select-placehoder {
+
+}
+.custom-select-options {
+  display: block !important;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  border: 1px solid green;
+  background-color: lightgreen;
+  transition: .3s transform;
+  transform-origin: top center;
+  transform: scaleY(0);
+}
+.custom-select-options.toggled {
+  transform: scaleY(1);
+}
+.custom-select-option {}
+.custom-select-option.selected,
+.custom-select-option:hover {
+  background-color: green;
+}
+.custom-select-option.disabled {
+  background-color: grey;
+}
+.custom-select-option:hover {
+  background-color: ;
+}
